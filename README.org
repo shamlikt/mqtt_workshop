@@ -1,0 +1,29 @@
+** Broker: This case we are using mosquitto
+
+*** install: sudo apt-get install mosquitto
+
+    - status: =sudo service mosquitto status=
+    - on/off: =sudo service mosquitto start/stop=
+ 
+    - config_file = /etc/mosquitto/mosquitto.conf
+
+
+** publisher subscriber using mosquitto clients
+
+*** install: =apt-get install mosquitto clients=
+
+*** pub:  =mosquitto_pub  -t /home/room1/fan -m "{status:on, speed:500 rmp}"  -h 192.168.1.105 -p 1883 -q 0=
+
+*** sub: =mosquitto_sub -t /home/room1/fan  -p 1883 -q 0=
+
+    - -t ->  topic
+    - -m ->  message
+    - -h ->  hostname/ip address of mosquitto
+    - -p ->  port
+    - -q ->  QOS
+
+** Publisher subscriber using  python
+*** Client : paho
+    - paho is a python client maintained by eclips.org
+
+***  install: =pip install paho-mqtt=

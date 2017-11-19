@@ -1,0 +1,31 @@
+#+Title: MQTT using Python
+#+Author: Shamlik
+#+EPRESENT_FRAME_LEVEL: 1
+
+* Introduction                                                  :hello:world:
+  :PROPERTIES:
+  :ARCHIVE:  hello
+  :END:
+# a comment, which will not be displayed
+
+** Lightweight pub/sub messaging
+- Andy Stanford(IBM),Arlen Nipper
+- Oil Pipeline telemetry systems - satellite
+- 1999 - Royalty free in 2010
+- MQTT - TCP/IP
+- MQTT-SN UDP/ZigBee (2013)
+
+* Architecture 
+** Pub/Sub
+   [[file:mqtt_arch.png]]1
+* Pros
+- Lightweight packet structure
+- Conserve both memory usage and power
+- Reliable on Unreliable networks 
+- Many-to-many broadcast
+- QOS support 
+* Cons
+- Uses TCP, Always on
+- Broker Resource utilization
+ 
+
